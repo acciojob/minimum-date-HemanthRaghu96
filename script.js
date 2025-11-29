@@ -1,6 +1,11 @@
 function minDate(dates) {
   //write you code here
+	  for(let i = 0; i < dates.length; i++) {
+    dates[i] = new Date(dates[i]);
+  }
+  return new Date(Math.min.apply(null, dates)).toISOString().split('T')[0].replace(/-/g, '/');
 }
+
 
 // Do not change the code
 
